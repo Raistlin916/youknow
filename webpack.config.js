@@ -26,7 +26,7 @@ const config = {
       exclude: /node_modules/,
       loaders: ['react-hot', 'babel']
     }, {
-      test: /\.scss$/,
+      test: /\.s?css$/,
       loaders: ['style', 'css', 'sass'],
     }]
   },
