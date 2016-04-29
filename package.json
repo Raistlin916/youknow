@@ -4,8 +4,11 @@
   "description": "guide for new one at youzan company",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "node webpack-dev-server.js"
+    "build": "NODE_ENV=production webpack --progress",
+    "dev": "npm run dev_server | npm run webpack",
+    "webpack": "NODE_ENV=dev node webpack-dev-server.js",
+    "dev_server": "NODE_ENV=dev node index.babel.js",
+    "lint": "eslint static"
   },
   "author": "gaokai",
   "license": "ISC",
@@ -28,7 +31,8 @@
     "koa-proxy": "^0.6.0",
     "koa-router": "^7.0.1",
     "koa-send": "^3.1.1",
-    "koa-static-cache": "^3.1.7"
+    "koa-static-cache": "^3.1.7",
+    "webpack": "^1.13.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",

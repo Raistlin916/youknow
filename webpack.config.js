@@ -7,27 +7,30 @@ const config = {
   devtool: env === 'dev' && 'source-map',
   entry: {
     main: [
-      './src/main'
+      'webpack-dev-server/client?http://localhost:8081',
+      'webpack/hot/only-dev-server',
+      './static/scripts/main'
     ]
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   output: {
-    path: path.join(__dirname, './dist/'),
-    publicPath: '/dist/',
+    path: path.join(__dirname, './static/build/'),
+    publicPath: '/build/',
     filename: '[name].bundle.js'
   },
   module: {
     loaders: [{
-      test: /\.js?$/,
+      test: /\.jsx?$/,
       exclude: /node_modules/,
-      loaders: ['babel']
+      loaders: ['react-hot', 'babel']
     }]
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env),
     })
@@ -49,4 +52,3 @@ if (env === 'production') {
 }
 
 module.exports = config
-
