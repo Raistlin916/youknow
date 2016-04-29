@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
-import City from './City'
+import Root from './containers/Root'
 
-ReactDom.render(<City />, document.getElementById('container'))
+ReactDom.render(<Root />, document.getElementById('container'))
