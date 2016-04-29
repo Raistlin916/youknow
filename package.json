@@ -8,7 +8,10 @@
     "dev": "npm run dev_server | npm run webpack",
     "webpack": "NODE_ENV=dev node webpack-dev-server.js",
     "dev_server": "NODE_ENV=dev node index.babel.js",
-    "lint": "eslint static"
+    "lint": "eslint static",
+    "windows_dev": "npm run windows_dev_server | npm run windows_webpack",
+    "windows_webpack": "set NODE_ENV=dev&node webpack-dev-server.js",
+    "windows_dev_server": "set NODE_ENV=dev&node index.babel.js"
   },
   "author": "gaokai",
   "license": "ISC",
