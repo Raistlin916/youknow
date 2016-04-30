@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './square.scss'
+import './Square.scss'
 
 export default class Square extends Component {
   render() {

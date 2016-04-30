@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import ScreenAdapter from './ScreenAdapter'
-import './city.scss'
+import './City.scss'
 
 export default function City() {
   return (
