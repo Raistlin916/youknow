@@ -5,7 +5,7 @@ router
   .get('/', async ctx => {
     ctx.render('index')
   })
-  .get('/square', async ctx => {
+  .get('/square/*', async ctx => {
     ctx.render('index')
   })
 

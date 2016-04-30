@@ -1,3 +1,43 @@
-ul {
+$borderColor: #e5e5e5;
 
+.square-wrap {
+
+}
+
+.building-name {
+  position: relative;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  padding: 16px 0;
+  text-indent: 28px;
+  line-height: 1em;
+  border-bottom: 1px solid $borderColor;
+  background-color: white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    width: 3px;
+    height: 18px;
+    background-color: #8A83AB;
+  }
+}
+
+.building-floors {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: white;
+  border-bottom: 1px solid $borderColor;
+  padding-left: 15px;
+  .floor-item {
+     padding: 15px 0;
+
+     & + .floor-item {
+       border-top: 1px solid $borderColor;
+     }
+  }
 }

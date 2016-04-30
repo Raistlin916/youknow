@@ -10,7 +10,7 @@ export default function Root() {
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={City} />
-        <Route path="square" component={Square} />
+        <Route path="square/:building" component={Square} />
         <Route path="*" component={City} />
       </Route>
     </Router>
