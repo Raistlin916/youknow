@@ -1,4 +1,4 @@
-export default {
+const data = {
   zixun: {
     name: '周边资讯',
     items: [{
@@ -74,5 +74,26 @@ export default {
   zhanghao: {
     name: '账号指南',
     items: []
+  }
+}
+
+export default {
+  get: name => Promise.resolve(data[name]),
+  fetchByKeyword: k => {
+    const keyword = k.trim()
+    if (!keyword) {
+      return Promise.resolve([])
+    }
+    const result = []
+    Object.keys(data).forEach(
+      buildingName => data[buildingName].items.forEach(
+        item => {
+          if (item.title.indexOf(keyword) > -1) {
+            result.push(item)
+          }
+        }
+      )
+    )
+    return Promise.resolve(result)
   }
 }
