@@ -1,3 +1,6 @@
+$cityTop: 30px;
+$cityTopIphone4: 60px;
+
 html, body {
   height: 100%;
 }
@@ -5,11 +8,35 @@ html, body {
 .city-container {
   position: absolute;
   left: 0;
-  top: -70px;
+  top: 0;
   right: 0;
-  bottom: 0;
+  bottom: -$cityTop;
+  transform: translateY(-$cityTop);
+  margin: 0 auto;
   max-width: 500px;
-  background: url('/assets/city.png') no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url('/assets/city.png') rgb(50, 52, 61) no-repeat;
+  background-size: 100%;
+  background-position: center top;
+}
+
+@media (device-width: 320px) and (device-height: 480px) {
+  .city-container {
+    bottom: -$cityTopIphone4;
+    transform: translateY(-$cityTopIphone4);
+  }
+}
+
+.link-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.city-link {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
 }
