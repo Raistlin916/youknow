@@ -32,6 +32,7 @@ html, body {
     line-height: 1em;
     margin: 10px 0;
   }
+
 }
 
 @media (device-width: 320px) and (device-height: 480px) {
@@ -53,9 +54,63 @@ html, body {
 
 .city-link {
   position: absolute;
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   left: 50%;
   top: 0;
   transform: translate(-50%, 0);
+}
+
+
+.animation-icon {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.animation-boat {
+  animation: 8s boat infinite ease-in-out;
+}
+
+.animation-light {
+  animation: 5s light infinite ease-in-out;
+}
+
+@keyframes boat {
+  0% {
+    transform: translate3d(-13px, 5px, 0);
+    opacity: 0;
+  }
+  15% {
+    transform: translate3d(-13px, 5px, 0);
+    opacity: 1;
+  }
+  55% {
+    transform: translate3d(6px, -4px, 0);
+    opacity: 1;
+  }
+  70% {
+    transform: translate3d(6px, -4px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(6px, -4px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes light {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

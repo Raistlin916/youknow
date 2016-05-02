@@ -12,23 +12,43 @@ export default function City() {
       <ScreenAdapter className="link-wrap">
         <Link
           to={'/square/zixun'} className="city-link"
-          style={{ marginLeft: '-70px', top: '70px' }}
+          style={{ marginLeft: -76, top: 86 }}
         />
         <Link
           to={'/square/hr'} className="city-link"
-          style={{ marginLeft: '70px', top: '160px' }}
+          style={{ marginLeft: 76, top: 200 }}
         />
         <Link
           to={'/square/enjoy'} className="city-link"
-          style={{ marginLeft: '-70px', top: '250px' }}
+          style={{ marginLeft: -76, top: 300 }}
         />
         <Link
           to={'/square/tiyan'} className="city-link"
-          style={{ marginLeft: '70px', top: '350px' }}
+          style={{ marginLeft: 76, top: 410 }}
         />
         <Link
           to={'/square/zhanghao'} className="city-link"
-          style={{ marginLeft: '-70px', top: '420px' }}
+          style={{ marginLeft: -76, top: 505 }}
+        />
+        <div
+          className="animation-icon animation-boat"
+          style={{
+            backgroundImage: 'url(/assets/boat.png)',
+            top: 255,
+            right: 78,
+            width: 33,
+            height: 33
+          }}
+        />
+        <div
+          className="animation-icon animation-light"
+          style={{
+            backgroundImage: 'url(/assets/light.png)',
+            top: 560,
+            left: 99,
+            width: 10,
+            height: 24
+          }}
         />
       </ScreenAdapter>
     </div>
