@@ -1,5 +1,5 @@
-$cityTop: 30px;
-$cityTopIphone4: 60px;
+$cityTop: 0;
+$cityTopIphone4: 70px;
 
 html, body {
   height: 100%;
@@ -17,12 +17,31 @@ html, body {
   background: url('/assets/city.png') rgb(50, 52, 61) no-repeat;
   background-size: 100%;
   background-position: center top;
+  text-align: center;
+  color: white;
+
+  h3 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 25px 0 10px 0;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1em;
+    margin: 10px 0;
+  }
 }
 
 @media (device-width: 320px) and (device-height: 480px) {
   .city-container {
     bottom: -$cityTopIphone4;
     transform: translateY(-$cityTopIphone4);
+
+    h3, p {
+      display: none;
+    }
   }
 }
 

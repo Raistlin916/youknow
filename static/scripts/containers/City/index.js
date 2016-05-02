@@ -7,6 +7,8 @@ export default function City() {
   document.title = '有赞百事通'
   return (
     <div className="city-container">
+      <h3>欢迎开启有赞探险之旅</h3>
+      <p>点击对应模块进入，或搜索输入关键词，了解更多信息！</p>
       <ScreenAdapter className="link-wrap">
         <Link
           to={'/square/zixun'} className="city-link"
