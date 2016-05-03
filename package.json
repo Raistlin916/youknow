@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --progress",
+    "start": "NODE_ENV=production node index.babel.js",
     "dev": "npm run dev_server | npm run webpack",
     "webpack": "NODE_ENV=dev node webpack-dev-server.js",
     "dev_server": "NODE_ENV=dev node index.babel.js",

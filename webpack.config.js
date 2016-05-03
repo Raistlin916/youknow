@@ -6,9 +6,11 @@ const env = process.env.NODE_ENV
 const config = {
   devtool: env === 'dev' && 'source-map',
   entry: {
-    main: [
+    main: env === 'dev' ? [
       'webpack-dev-server/client?http://localhost:8081',
       'webpack/hot/only-dev-server',
+      './static/scripts/main'
+    ] : [
       './static/scripts/main'
     ]
   },
@@ -33,7 +35,7 @@ const config = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
+    env === 'dev' ? new webpack.HotModuleReplacementPlugin() : function(){},
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env),
     })
