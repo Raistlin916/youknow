@@ -1,3 +1,4 @@
+'use strict';
 const fs = require('fs');
 
 const babelrc = fs.readFileSync('./.babelrc');
@@ -10,6 +11,7 @@ try {
   console.error(err);
 }
 
+require('babel-polyfill');
 require('babel-core/register')(config);
 require('./app');
 
