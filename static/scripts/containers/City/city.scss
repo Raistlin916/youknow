@@ -74,7 +74,19 @@ html, body {
 }
 
 .animation-light {
-  animation: 5s light infinite ease-in-out;
+  animation: 5s light infinite ease-in-out alternate-reverse;
+}
+
+.animation-balloon {
+  animation: 8s balloon infinite ease-in-out alternate-reverse;
+}
+
+.animation-rice {
+  animation: 5s rice infinite ease-in-out alternate-reverse;
+}
+
+.animation-cloud {
+  animation: 5s cloud infinite ease-in-out;
 }
 
 @keyframes boat {
@@ -105,12 +117,61 @@ html, body {
     opacity: 0;
   }
   30% {
-    opacity: 1;
+    opacity: 0;
   }
   80% {
     opacity: 1;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes balloon {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  10% {
+    transform: translate3d(0, 0, 0);
+  }
+  90% {
+    transform: translate3d(50px, -20px, 0);
+  }
+  100% {
+    transform: translate3d(50px, -20px, 0);
+  }
+}
+
+@keyframes rice {
+  0% {
     opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cloud {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 1;
+    transform: translate3d(-20px, 10px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-20px, 10px, 0);
   }
 }

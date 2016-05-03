@@ -50,6 +50,36 @@ export default function City() {
             height: 24
           }}
         />
+        <div
+          className="animation-icon animation-balloon"
+          style={{
+            backgroundImage: 'url(/assets/balloon.png)',
+            top: 110,
+            right: 130,
+            width: 49,
+            height: 88
+          }}
+        />
+        <div
+          className="animation-icon animation-rice"
+          style={{
+            backgroundImage: 'url(/assets/rice.png)',
+            top: 344,
+            left: 45,
+            width: 53,
+            height: 27
+          }}
+        />
+        <div
+          className="animation-icon animation-cloud"
+          style={{
+            backgroundImage: 'url(/assets/cloud.png)',
+            top: 415,
+            right: 120,
+            width: 17,
+            height: 17
+          }}
+        />
       </ScreenAdapter>
     </div>
   )
