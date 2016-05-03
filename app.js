@@ -16,7 +16,7 @@ jade.use(app)
 
 app.use(logger())
 app.use(favicon())
-if (process.env.NODE_ENV === 'dev') {
+if (process.env.NODE_ENV === 'development') {
   app.use(middlewares.webpackDev);
 } else {
   app.use(middlewares.webpackProd);

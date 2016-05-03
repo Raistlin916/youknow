@@ -4,9 +4,9 @@ const webpack = require('webpack')
 const env = process.env.NODE_ENV
 
 const config = {
-  devtool: env === 'dev' && 'source-map',
+  devtool: env === 'development' && 'source-map',
   entry: {
-    main: env === 'dev' ? [
+    main: env === 'development' ? [
       'webpack-dev-server/client?http://localhost:8081',
       'webpack/hot/only-dev-server',
       './static/scripts/main'
@@ -29,13 +29,13 @@ const config = {
       loaders: ['react-hot', 'babel']
     }, {
       test: /\.s?css$/,
-      loaders: ['style', 'css', 'sass'],
+      loaders: ['style', 'css?-minimize', 'sass'],
     }]
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
-    env === 'dev' ? new webpack.HotModuleReplacementPlugin() : function(){},
+    env === 'development' ? new webpack.HotModuleReplacementPlugin() : function(){},
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env),
     })
@@ -45,13 +45,10 @@ const config = {
 if (env === 'production') {
   config.plugins.push(
     new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        pure_getters: true,
-        unsafe: true,
-        unsafe_comps: true,
-        screw_ie8: true,
-        warnings: false,
+      compress: {
+        warnings: false
       },
+      test: /\.js($|\?)/i
     })
   )
 }

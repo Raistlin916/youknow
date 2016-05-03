@@ -2,9 +2,9 @@ import React from 'react'
 
 export default props => {
   const originSize = { width: 375, height: 680 }
-  const scale = window.screen.width / originSize.width
+  const scale = Math.min(window.screen.width, 500) / originSize.width
   const style = {
-    transform: `scale(${scale})`,
+    transform: `scale(${scale}) translate(-50%, 0)`,
     transformOrigin: 'left top',
     ...originSize
   }

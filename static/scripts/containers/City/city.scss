@@ -31,8 +31,9 @@ html, body {
 
 .link-wrap {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
+  transform: translate(-50%, 0);
 }
 
 .city-link {
@@ -85,7 +86,7 @@ html, body {
     transform: translate3d(6px, -4px, 0);
     opacity: 1;
   }
-  70% {
+  90% {
     transform: translate3d(6px, -4px, 0);
     opacity: 0;
   }
