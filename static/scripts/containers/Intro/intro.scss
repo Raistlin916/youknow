@@ -1,0 +1,23 @@
+.intro-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-image: url('/assets/intro.png');
+}
+
+.intro-enter-link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 57px;
+  line-height: 57px;
+  text-align: center;
+  text-decoration: none;
+  color: #301202;
+  font-size: 16px;
+  background-color: #ffb400;
+}
