@@ -9,5 +9,6 @@ router
   .get('/', renderIndex)
   .get('/city', renderIndex)
   .get('/square/*', renderIndex)
+  .get('/ip', ctx => ctx.render('ip', { ip: ctx.ip }))
 
 export default router
