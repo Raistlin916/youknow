@@ -1,9 +1,13 @@
 import koaRouter from 'koa-router'
 const router = koaRouter()
 
+async function renderIndex(ctx) {
+  ctx.render('index', { env: process.env.NODE_ENV })
+}
+
 router
-  .get('/', async ctx => ctx.render('index'))
-  .get('/city', async ctx => ctx.render('index'))
-  .get('/square/*', async ctx => ctx.render('index'))
+  .get('/', renderIndex)
+  .get('/city', renderIndex)
+  .get('/square/*', renderIndex)
 
 export default router
