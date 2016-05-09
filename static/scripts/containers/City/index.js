@@ -35,7 +35,7 @@ export default function City() {
         <div
           className="animation-icon animation-boat"
           style={{
-            backgroundImage: 'url(/assets/boat.png)',
+            backgroundImage: 'url(http://img.yzcdn.cn/public_files/2016/05/09/9107b89072cf5b6047cfea651e6e6ad5.png)',
             top: 255,
             right: 78,
             width: 33,
@@ -45,7 +45,7 @@ export default function City() {
         <div
           className="animation-icon animation-light"
           style={{
-            backgroundImage: 'url(/assets/light.png)',
+            backgroundImage: 'url(http://img.yzcdn.cn/public_files/2016/05/09/0d577cb0993f508f7fdd2e5be35606b0.png)',
             top: 560,
             left: 99,
             width: 10,
@@ -55,7 +55,7 @@ export default function City() {
         <div
           className="animation-icon animation-balloon"
           style={{
-            backgroundImage: 'url(/assets/balloon.png)',
+            backgroundImage: 'url(http://img.yzcdn.cn/public_files/2016/05/09/ec44247b9e6107b34174674eda173c41.png)',
             top: 110,
             right: 130,
             width: 49,
@@ -65,7 +65,7 @@ export default function City() {
         <div
           className="animation-icon animation-rice"
           style={{
-            backgroundImage: 'url(/assets/rice.png)',
+            backgroundImage: 'url(http://img.yzcdn.cn/public_files/2016/05/09/7f9fda43e1d7e83a431a1bf9ce5260b1.png)',
             top: 344,
             left: 45,
             width: 53,
@@ -75,7 +75,7 @@ export default function City() {
         <div
           className="animation-icon animation-cloud"
           style={{
-            backgroundImage: 'url(/assets/cloud.png)',
+            backgroundImage: 'url(http://img.yzcdn.cn/public_files/2016/05/09/b81465ec1b93284a29bf15c99be46e38.png)',
             top: 415,
             right: 120,
             width: 17,
