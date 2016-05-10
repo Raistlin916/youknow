@@ -36,6 +36,7 @@ $borderColor: #e5e5e5;
 
   .floor-item {
      padding: 15px 0;
+     cursor: pointer;
 
      & + .floor-item {
        border-top: 1px solid $borderColor;

@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch'
 
-export default (url, option) => {
+const fetchWrapped = (url, option) => {
   option = Object.assign({
     headers: {
       Accept: 'application/json',
@@ -23,5 +23,7 @@ export default (url, option) => {
     option.body = JSON.stringify(option.body)
   }
   return fetch(url, option)
-    //.then(res => res.json())
 }
+
+export const fetchJSON = (...args) => fetchWrapped(...args).then(res => res.json())
+export default fetchWrapped
