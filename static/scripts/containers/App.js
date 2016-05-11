@@ -23,19 +23,21 @@ export default class App extends Component {
   }
 
   render() {
+    const { children } = this.props
+    const { isExternal } = this.state
+
     window.ontouchmove = e => {
       if (children.type === Intro) {
         e.preventDefault()
       }
     }
 
-    const { children } = this.props
-    const { isExternal } = this.state
-    console.log(isExternal)
     return (
       <div>
-        {children}
-        {(children.type === Square || children.type === City) && <SearchIcon />}
+        {React.cloneElement(children, { isExternal })}
+        {
+          (children.type === Square || children.type === City) && <SearchIcon />
+        }
       </div>
     )
   }

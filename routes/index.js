@@ -8,6 +8,7 @@ async function renderIndex(ctx) {
 router
   .get('/', renderIndex)
   .get('/city', renderIndex)
+  .get('/external', renderIndex)
   .get('/square/*', renderIndex)
 
 export default router

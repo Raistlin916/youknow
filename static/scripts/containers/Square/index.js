@@ -33,12 +33,13 @@ export default class Square extends Component {
 
   render() {
     const { building, loading } = this.state
+    const { isExternal } = this.props
     document.title = building.name
 
     return (
       <div className="square-wrap">
         <h2 className="building-name">{building.name}</h2>
-        <Building floors={building.items} loading={loading} />
+        <Building floors={building.items} loading={loading} isExternal={isExternal} />
       </div>
     )
   }
