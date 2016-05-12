@@ -1,0 +1,18 @@
+.room-content {
+  padding: 10px 15px;
+  margin-top: 10px;
+  background: white;
+  line-height: 1.4em;
+
+  h1 {
+    line-height: 1.2em;
+  }
+
+  ul, ol {
+    padding-left: 30px;
+
+    li {
+      margin: 7px 0;
+    }
+  }
+}

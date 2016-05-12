@@ -1,9 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import './Square.scss'
 import buildings from '../buildings'
 import Building from '../../components/Building'
 
 export default class Square extends Component {
+
+  static propTypes = {
+    isExternal: PropTypes.bool
+  };
 
   constructor(props) {
     super(props)
