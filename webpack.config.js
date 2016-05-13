@@ -20,7 +20,7 @@ const config = {
   output: {
     path: path.join(__dirname, './static/build/'),
     publicPath: '/build/',
-    filename: '[name].bundle.js'
+    filename: env === 'development' ? '[name].bundle.js' : '[name]_[chunkhash].bundle.js'
   },
   module: {
     loaders: [{
