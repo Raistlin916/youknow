@@ -28,7 +28,7 @@ export default class App extends Component {
       img.src = 'http://doc.qima-inc.com'
       img.onerror = img.onload = resolve
 
-      setTimeout(() => { img.src = '' }, 1100)
+      setTimeout(() => { img.src = '/' }, 1100)
     })
 
     return Promise.race([
