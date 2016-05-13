@@ -3,7 +3,6 @@ import SearchIcon from './SearchIcon'
 import Square from './Square'
 import City from './City'
 import Intro from './Intro'
-import fetch from '../utils/fetch'
 
 export default class App extends Component {
 
@@ -16,10 +15,18 @@ export default class App extends Component {
 
   componentDidMount() {
     Promise.race([
-      fetch('http://doc.qima-inc.com', { method: 'HEAD' }),
+      this.sniffer(),
       new Promise((resolve, reject) => setTimeout(reject, 1000))
     ]).then(() => this.setState({ isExternal: false }))
       .catch(() => this.setState({ isExternal: true }))
+  }
+
+  sniffer() {
+    const img = new Image()
+    img.src = 'http://doc.qima-inc.com'
+    return new Promise((resolve, reject) => {
+      img.onerror = img.onload = resolve
+    })
   }
 
   render() {
