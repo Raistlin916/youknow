@@ -22,10 +22,12 @@ export default class App extends Component {
   }
 
   sniffer() {
-    const img = new Image()
-    img.src = 'http://doc.qima-inc.com'
-    return new Promise((resolve, reject) => {
-      img.onerror = img.onload = resolve
+    return new Promise(resolve => {
+      setTimeout(() => {
+        const img = new Image()
+        img.src = 'http://doc.qima-inc.com'
+        img.onerror = img.onload = resolve
+      }, 100)
     })
   }
 
