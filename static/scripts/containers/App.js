@@ -14,9 +14,11 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.sniffer()
-      .then(() => this.setState({ isExternal: false }))
-      .catch(() => this.setState({ isExternal: true }))
+    setTimeout(() =>
+      this.sniffer()
+        .then(() => this.setState({ isExternal: false }))
+        .catch(() => this.setState({ isExternal: true }))
+    , 400)
 
     const img = new Image()
     img.src = 'http://img.yzcdn.cn/public_files/2016/05/09/a903e4e4de9c5591b411ac105c6be5a0.png'
@@ -28,12 +30,12 @@ export default class App extends Component {
       img.src = 'http://doc.qima-inc.com'
       img.onerror = img.onload = resolve
 
-      setTimeout(() => { img.src = '/' }, 1100)
+      setTimeout(() => { img.src = '' }, 700)
     })
 
     return Promise.race([
       imgSniffer,
-      new Promise((resolve, reject) => setTimeout(reject, 1000))
+      new Promise((resolve, reject) => setTimeout(reject, 600))
     ])
   }
 
