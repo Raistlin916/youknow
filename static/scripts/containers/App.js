@@ -14,21 +14,27 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    Promise.race([
-      this.sniffer(),
-      new Promise((resolve, reject) => setTimeout(reject, 1000))
-    ]).then(() => this.setState({ isExternal: false }))
+    this.sniffer()
+      .then(() => this.setState({ isExternal: false }))
       .catch(() => this.setState({ isExternal: true }))
+
+    const img = new Image()
+    img.src = 'http://img.yzcdn.cn/public_files/2016/05/09/a903e4e4de9c5591b411ac105c6be5a0.png'
   }
 
   sniffer() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        const img = new Image()
-        img.src = 'http://doc.qima-inc.com'
-        img.onerror = img.onload = resolve
-      }, 100)
+    const imgSniffer = new Promise(resolve => {
+      const img = new Image
+      img.src = 'http://doc.qima-inc.com'
+      img.onerror = img.onload = resolve
+
+      setTimeout(() => { img.src = '' }, 1100)
     })
+
+    return Promise.race([
+      imgSniffer,
+      new Promise((resolve, reject) => setTimeout(reject, 1000))
+    ])
   }
 
   render() {
