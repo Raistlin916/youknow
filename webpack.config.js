@@ -10,10 +10,12 @@ const config = {
   devtool: env === 'development' && 'source-map',
   entry: {
     main: env === 'development' ? [
+      'babel-polyfill',
       'webpack-dev-server/client?http://localhost:8081',
       'webpack/hot/only-dev-server',
       './static/scripts/main'
     ] : [
+      'babel-polyfill',
       './static/scripts/main'
     ]
   },
