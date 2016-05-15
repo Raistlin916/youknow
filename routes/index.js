@@ -21,7 +21,7 @@ router
   .get('/city', renderIndex)
   .get('/external', renderIndex)
   .get('/square/*', renderIndex)
-  .get('/api/room/:roomId', apiRoom)
+  //.get('/api/room/:roomId', apiRoom)
   .get('/api/building', apiBuildings)
 
 export default router

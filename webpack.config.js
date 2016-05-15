@@ -59,6 +59,12 @@ if (env === 'production') {
       test: /\.js($|\?)/i
     })
   )
+  Object.assign(config.resolve, {
+    alias: {
+      'react': 'react-lite',
+      'react-dom': 'react-lite'
+    }
+  })
 }
 
 module.exports = config
