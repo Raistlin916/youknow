@@ -15,4 +15,18 @@
       margin: 7px 0;
     }
   }
+
+  img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  a {
+    color: #3b73af;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
