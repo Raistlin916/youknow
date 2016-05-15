@@ -1,5 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
+var precss       = require('precss');
+var autoprefixer = require('autoprefixer');
+
 
 const env = process.env.NODE_ENV
 
@@ -29,13 +32,16 @@ const config = {
       loaders: ['react-hot', 'babel']
     }, {
       test: /\.s?css$/,
-      loaders: ['style', 'css?-minimize', 'sass'],
+      loaders: ['style', 'css?-minimize', 'sass', 'postcss-loader'],
     }]
+  },
+  postcss: function postcss() {
+    return [precss, autoprefixer];
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
-    env === 'development' ? new webpack.HotModuleReplacementPlugin() : function(){},
+    env === 'development' ? new webpack.HotModuleReplacementPlugin() : function noop() {},
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env),
     })

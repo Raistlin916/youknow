@@ -5,7 +5,9 @@ export default props => {
   const scale = Math.min(window.screen.width, 640) / originSize.width
   const style = {
     transform: `scale(${scale}) translate(-50%, 0)`,
+    webkitTransform: `scale(${scale}) translate(-50%, 0)`,
     transformOrigin: 'left top',
+    webkitTransformOrigin: 'left top',
     ...originSize
   }
   return <div {...props} style={style}></div>
