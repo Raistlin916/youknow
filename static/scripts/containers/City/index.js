@@ -6,7 +6,7 @@ import './City.scss'
 export default function City() {
   document.title = '有赞百事通'
   // image size 375 * 680
-  const cityHeight = Math.min(window.screen.width, 640) / 375 * 680
+  const cityHeight = Math.min(window.screen.width, 500) / 375 * 680
   return (
     <div className="city-container" style={{ height: cityHeight }}>
       <h3>欢迎开启有赞探险之旅</h3>

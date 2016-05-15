@@ -5,12 +5,6 @@ import './intro.scss'
 export default ({ isExternal }) =>
   <div className="intro-wrap">
     {
-      isExternal ?
-        (
-        <div className="intro-enter-link-wrap">
-          <Link className="intro-enter-link" to="/square/zhanghao/1">wifi连接指南</Link>
-          <Link className="intro-enter-link" to="/city">立即开启有赞之旅</Link>
-        </div>
-        ) : <Link className="intro-enter-link" to="/city">立即开启有赞之旅</Link>
+      <Link className="intro-enter-link" to="/city">立即开启有赞之旅</Link>
     }
   </div>
