@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
-var precss       = require('precss');
-var autoprefixer = require('autoprefixer');
+const precss = require('precss')
+const autoprefixer = require('autoprefixer')
 
 
 const env = process.env.NODE_ENV
@@ -38,7 +38,7 @@ const config = {
     }]
   },
   postcss: function postcss() {
-    return [precss, autoprefixer];
+    return [precss, autoprefixer]
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
