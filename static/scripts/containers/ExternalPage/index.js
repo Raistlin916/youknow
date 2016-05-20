@@ -8,7 +8,7 @@ export default () =>
     <div>
       <p>该页面需要在内网环境打开，请先检查是否连接名为 youzan-office 的 wifi——</p>
       <ol>
-        <li>若未连接，请返回引导页，根据 wifi 连接指南完成操作</li>
+        <li>若未连接，请查看欢迎邮件，根据 wifi 连接指南完成操作</li>
         <li>若已连接，请刷新页面重试</li>
       </ol>
     </div>
