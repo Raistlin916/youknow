@@ -27,15 +27,13 @@ export default class App extends Component {
   sniffer() {
     const imgSniffer = new Promise(resolve => {
       const img = new Image
-      img.src = 'http://doc.qima-inc.com'
-      img.onerror = img.onload = resolve
-
-      setTimeout(() => { img.src = '' }, 700)
+      img.src = 'http://qima-inc.com'
+      img.onload = img.onerror = resolve
     })
 
     return Promise.race([
       imgSniffer,
-      new Promise((resolve, reject) => setTimeout(reject, 600))
+      new Promise((resolve, reject) => setTimeout(reject, 1500))
     ])
   }
 
