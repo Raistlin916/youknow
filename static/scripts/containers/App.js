@@ -27,7 +27,7 @@ export default class App extends Component {
   sniffer() {
     const imgSniffer = new Promise(resolve => {
       const img = new Image
-      img.src = 'http://qima-inc.com'
+      img.src = 'http://www.qima-inc.com'
       img.onload = img.onerror = resolve
     })
 
